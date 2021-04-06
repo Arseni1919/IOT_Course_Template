@@ -10,7 +10,9 @@ outputDDS = connector.getOutput("MyPublisher::MyWriter")
 
 while True:
     randomNumb = random.randint(0, 10)
-    outputDDS.instance.setNumber("Example", randomNumb)
+    status = '[ok]'
+    outputDDS.instance.setNumber("NumberMember", randomNumb)
+    outputDDS.instance.setString("StingMember", status)
     outputDDS.write()
     sleep(1)
-    print(f'published: {randomNumb}')
+    print(f'published: {randomNumb}, Status: {status}')

@@ -12,8 +12,9 @@ while True:
     print(f'numOfSamples: {numOfSamples}')
     for j in range(0, numOfSamples):
         if input_DDS.infos.isValid(j):
-            some_number = input_DDS.samples.getNumber(j, "Example")
-            print(f'Received Example: {some_number}')
+            some_number = input_DDS.samples.getNumber(j, "NumberMember")
+            some_string = input_DDS.samples.getString(j, "StingMember")
+            print(f'Received Example: {some_number}, Status: {some_string}')
     sleep(1)
 
 

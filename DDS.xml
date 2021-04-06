@@ -18,7 +18,8 @@ This code contains trade secrets of Real-Time Innovations, Inc.
     <!-- types -->
     <types>
     <struct name="ExampleMessage">
-      <member name="Example" type="long" key="true"/>
+      <member name="NumberMember" type="long" key="true"/>
+      <member name="StingMember" stringMaxLength="128" type="string"/>
     </struct>
 
     </types>
